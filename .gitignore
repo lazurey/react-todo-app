@@ -1,0 +1,9 @@
+node_modules/
+.module-cache
+
+.idea/
+
+static
+
+.DS_STORE
+*.log*
