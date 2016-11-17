@@ -7,6 +7,9 @@ import { Router, Route, browserHistory } from 'react-router'
 import TodoHome from './containers/TodoHome'
 import configure from './store'
 
+import '!!style!css!react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+
 const store = configure()
 const history = syncHistoryWithStore(browserHistory, store)
 
