@@ -1,0 +1,15 @@
+.main {
+  width: 400px;
+  max-width: 100%;
+  padding: 40px;
+  margin: 40px auto;
+  background: #FFF;
+  min-height: 620px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: #F3F3EE;
+  font-family: 'Open Sans', Lato, Arial;
+  color: #747981;
+}

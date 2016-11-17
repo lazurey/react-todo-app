@@ -1,3 +1,4 @@
+import 'isomorphic-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -10,7 +11,11 @@ import configure from './store'
 import '!!style!css!react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 
-const store = configure()
+if (process.env.NODE_ENV !== 'production') {
+  require('./api/mock')
+}
+
+const store = configure({})
 const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render(
