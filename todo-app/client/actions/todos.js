@@ -12,7 +12,7 @@ const addSuccess = createAction(ADD_TODO, item => item)
 export function load() {
   return dispatch => api.load()
     .then((data) => {
-      if (data.status === 200) {
+      if (data.status >= 200 && data.status < 300) {
         dispatch(loadSuccess(data.data))
       } else {
         dispatch(showError(data.message))
@@ -23,7 +23,7 @@ export function load() {
 export function addTodo(title) {
   return dispatch => api.post(title)
     .then((data) => {
-      if (data.status === 201) {
+      if (data.status >= 200 && data.status < 300) {
         dispatch(addSuccess(data.data))
       } else {
         dispatch(showError(data.message))

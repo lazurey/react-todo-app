@@ -12,7 +12,7 @@ const deleteSuccess = createAction(DELETE_TODO, id => id)
 export function updateTitle(id, title) {
   return dispatch => api.patch(id, title)
     .then((data) => {
-      if (data.status === 200) {
+      if (data.status >= 200 && data.status < 300) {
         dispatch(updateSuccess(data.data))
       } else {
         dispatch(showError(data.message))
@@ -23,7 +23,7 @@ export function updateTitle(id, title) {
 export function deleteItem(id) {
   return dispatch => api.delete(id)
     .then((data) => {
-      if (data.status === 200) {
+      if (data.status >= 200 && data.status < 300) {
         dispatch(deleteSuccess(id))
       } else {
         dispatch(showError(data.message))

@@ -6,7 +6,7 @@ export default {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: { title }
+    body: JSON.stringify({ title })
   })
   .then(formatResponse),
   delete: id => fetch(`${apiServer}/todos/${id}`, {

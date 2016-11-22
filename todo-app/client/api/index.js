@@ -11,12 +11,12 @@ if (global.location &&
   apiAddress = 'http://localhost:3000'
 }
 
+apiAddress += '/api'
+
 /* istanbul ignore if */
 if (process.env.NODE_ENV === 'production') {
-  apiAddress = ''
+  apiAddress = 'http://localhost:8080'
 }
-
-apiAddress += '/api'
 
 export const formatResponse = (response) => {
   let jsonResponse
