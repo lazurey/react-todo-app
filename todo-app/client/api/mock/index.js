@@ -9,8 +9,8 @@ import delete200 from './delete-200.json'
 
 // /todos get, post
 fetchMock.get(`${apiServer}/todos`, todos)
-fetchMock.post(`${apiServer}/todos`, { status: 201, body: item})
-fetchMock.post(`${apiServer}/todos`, { status: 400, body: msg400})
+fetchMock.post(`${apiServer}/todos`, { status: 201, body: item })
+fetchMock.post(`${apiServer}/todos`, { status: 400, body: msg400 })
 
 // /todos/${id}, patch, delete
 fetchMock.patch(`${apiServer}/todos/[0-9]`, item)
