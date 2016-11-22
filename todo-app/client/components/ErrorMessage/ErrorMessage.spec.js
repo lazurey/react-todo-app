@@ -22,7 +22,7 @@ describe('<ErrorMessage />', () => {
     const wrapper = shallow(<ErrorMessage
       show={showError.show}
       message={showError.message}
-      hideError={() => true}
+      hideError={() => {}}
     />)
     expect(wrapper.find(Snackbar)).to.have.length(1)
     expect(wrapper.prop('active')).to.be.true

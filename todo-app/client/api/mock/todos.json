@@ -1,34 +1,55 @@
 [{
     "id": 1,
-    "title": "another one and I have a very very very looooooooooooooooooooooong title",
+    "title": "/todos, get 200, get a list",
     "createdDatetime": "Thu Nov 17 09:47:53 CST 2016",
     "updatedDatetime": "Thu Nov 17 09:47:53 CST 2016",
     "completed": false
 },
 {
     "id": 2,
-    "title": "another two",
+    "title": "/todos, post, 201, add a new todo item",
     "createdDatetime": "Thu Nov 17 09:47:55 CST 2016",
     "updatedDatetime": "Thu Nov 17 09:47:55 CST 2016",
     "completed": false
 },
 {
     "id": 3,
-    "title": "another four",
+    "title": "/todos, post, 400, empty title",
     "createdDatetime": "Thu Nov 17 09:47:57 CST 2016",
     "updatedDatetime": "Thu Nov 17 09:47:57 CST 2016",
     "completed": false
 },
 {
     "id": 4,
-    "title": "another three",
+    "title": "/todos/${id}, patch, 200, updated item",
     "createdDatetime": "Thu Nov 17 09:47:59 CST 2016",
     "updatedDatetime": "Thu Nov 17 09:47:59 CST 2016",
     "completed": false
 },
 {
     "id": 5,
-    "title": "another five",
+    "title": "/todos/${id}, patch, 400, empty title",
+    "createdDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "updatedDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "completed": false
+},
+{
+    "id": 6,
+    "title": "/todos/${id}, patch, 404, item not found",
+    "createdDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "updatedDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "completed": false
+},
+{
+    "id": 7,
+    "title": "/todos/${id}, delete, 200, item deleted",
+    "createdDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "updatedDatetime": "Thu Nov 17 09:48:04 CST 2016",
+    "completed": false
+},
+{
+    "id": 8,
+    "title": "/todos/${id}, delete, 404, item not found",
     "createdDatetime": "Thu Nov 17 09:48:04 CST 2016",
     "updatedDatetime": "Thu Nov 17 09:48:04 CST 2016",
     "completed": false

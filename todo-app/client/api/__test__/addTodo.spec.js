@@ -13,16 +13,18 @@ afterEach(() => {
 
 describe('Todos API Get', () => {
   const testUrl = `${apiServer}/todos`
+  const validTitle = 'this is a valid title'
+  const invalidTitle = ''
 
   it('should be able to get a Promise', (done) => {
-    fetchMock.get(testUrl, 200)
-    todosApi.load().then.should.be.a.Function
+    fetchMock.post(testUrl, 200)
+    todosApi.post(validTitle).then.should.be.a.Function
     done()
   })
 
-  it('should be able to get a todo list', (done) => {
-    fetchMock.get(testUrl, [{}])
-    todosApi.load()
+  it('should return item if success', (done) => {
+    fetchMock.post(testUrl, { id: 1 })
+    todosApi.post(validTitle)
       .then((response) => {
         response.should.be.Existed
         response.should.be.an.instanceOf(Object)
@@ -31,8 +33,8 @@ describe('Todos API Get', () => {
   })
 
   it('should be able to handle illegal json format', (done) => {
-    fetchMock.get(testUrl, { body: 'string it is', status: 500 })
-    todosApi.load()
+    fetchMock.post(testUrl, 500)
+    todosApi.post(validTitle)
       .catch((error) => {
         error.should.be.Existed
         done()
@@ -40,8 +42,8 @@ describe('Todos API Get', () => {
   })
 
   it('should be able to handle error status', (done) => {
-    fetchMock.get(testUrl, { body: { message: 'items not found' }, status: 404 })
-    todosApi.load()
+    fetchMock.post(testUrl, { body: { message: 'items not found' }, status: 404 })
+    todosApi.post(invalidTitle)
       .then((response) => {
         response.should.be.Existed
         response.message.should.be.equal('items not found')

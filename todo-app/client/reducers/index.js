@@ -3,9 +3,11 @@ import { combineReducers } from 'redux'
 
 import todos from './todosReducer'
 import errors from './errorsReducer'
+import status from './statusReducer'
 
 export default combineReducers({
   routing,
   todos,
-  errors
+  errors,
+  status
 })

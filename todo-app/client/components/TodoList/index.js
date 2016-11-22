@@ -6,7 +6,8 @@ import style from './style.css'
 
 class TodoList extends Component {
   static propTypes = {
-    todoList: PropTypes.array
+    todoList: PropTypes.array,
+    actions: PropTypes.object
   }
 
   static defaultProps = {
@@ -14,8 +15,8 @@ class TodoList extends Component {
   }
 
   _renderItems() {
-    const { todoList } = this.props
-    return todoList.map((item, i) => <TodoItem item={item} key={i} />)
+    const { todoList, actions } = this.props
+    return todoList.map((item, i) => <TodoItem actions={actions} item={item} key={i} />)
   }
 
   render() {
