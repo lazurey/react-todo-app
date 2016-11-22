@@ -29,13 +29,13 @@ Setup
 yarn install
 ```
 
-Start server
+Start server (at localhost:3000)
 
 ```
 npm start
 ```
 
-Run test
+Run test (eslint & mocha & nyc)
 ```
 npm run test
 ```
@@ -50,7 +50,7 @@ npm run test
 - [Mocha](https://mochajs.org/) & [Chai](http://chaijs.com/)
 - [Enzyme](https://github.com/airbnb/enzyme)
 - [ESLint](http://eslint.org/)
-- Istanbul
+- [Istanbul/nyc](https://github.com/istanbuljs/nyc)
 
 ## Others
 It uses the API rmal from [Spring Boot Api](https://github.com/silverjava/rest-api-springboot).
