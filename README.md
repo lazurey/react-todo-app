@@ -35,13 +35,22 @@ Start server
 npm start
 ```
 
+Run test
+```
+npm run test
+```
+
 ## Dependencies
 
-- Yarn
-- React
-- Redux
-- Webpack
-- React Material Design Light
+- [Yarn](https://yarnpkg.com/)
+- [React](https://facebook.github.io/react/)
+- [Redux](http://redux.js.org/docs/introduction/)
+- [Webpack](https://webpack.github.io/)
+- [React Material Design Light](https://react-mdl.github.io/react-mdl/)
+- [Mocha](https://mochajs.org/) & [Chai](http://chaijs.com/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [ESLint](http://eslint.org/)
+- Istanbul
 
 ## Others
 It uses the API rmal from [Spring Boot Api](https://github.com/silverjava/rest-api-springboot).

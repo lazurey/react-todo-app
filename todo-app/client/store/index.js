@@ -5,18 +5,18 @@ import promise from 'redux-promise'
 import rootReducer from '../reducers'
 
 export default function configure(initialState) {
-
   const createStoreWithMiddleware = applyMiddleware(
     thunk,
     promise
   )(createStore)
 
+  const store = createStoreWithMiddleware(rootReducer, initialState)
+
   if (module.hot) {
     module.hot.accept('../reducers', () => {
-      const nextReducer = require('../reducers').default;
-      store.replaceReducer(nextReducer);
-    });
+      store.replaceReducer(require('../reducers'))
+    })
   }
 
-  return createStoreWithMiddleware(rootReducer, initialState);
+  return store
 }

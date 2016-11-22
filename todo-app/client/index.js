@@ -8,8 +8,8 @@ import { Router, Route, browserHistory } from 'react-router'
 import TodoHome from './containers/TodoHome'
 import configure from './store'
 
-import '!!style!css!react-mdl/extra/material.css';
-import 'react-mdl/extra/material.js';
+import '!!style!css!react-mdl/extra/material.css'
+import 'react-mdl/extra/material'
 
 if (process.env.NODE_ENV !== 'production') {
   require('./api/mock')
@@ -21,8 +21,7 @@ const history = syncHistoryWithStore(browserHistory, store)
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={TodoHome}>
-      </Route>
+      <Route path="/" component={TodoHome} />
     </Router>
   </Provider>,
   document.getElementById('root')
