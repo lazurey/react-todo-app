@@ -31,7 +31,7 @@ describe('Todos API', () => {
   })
 
   it('should be able to handle illegal json format', (done) => {
-    fetchMock.get(testUrl, 'this is not a json')
+    fetchMock.get(testUrl, { body: 'string it is', status: 500 })
     todosApi.load()
       .catch((error) => {
         error.should.be.Existed

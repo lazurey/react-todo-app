@@ -8,6 +8,7 @@ export default {
       try {
         jsonResponse = response.json()
       } catch (err) {
+        /* istanbul ignore next */
         throw new Error('bad json format')
       }
 

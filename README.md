@@ -8,8 +8,9 @@ Implement a client-side **Todo List** application based on given APIs.
 ### Provided
 
 - API in json format
-  All API example are listed under `/client/api/mock`
+  All API example are listed under `./client/api/mock/index.js`
 - Basic project structure with all dependencies you will need.
+- Please use [React MDL](https://react-mdl.github.io/react-mdl/) as style guide for the whole project and try to write as **little** CSS code as possible.
 
 ###
 

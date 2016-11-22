@@ -10,11 +10,18 @@
     "mocha": "mocha -r should -r isomorphic-fetch tools/testSetup.js \"client/**/*.spec.js\" --reporter progress",
     "istanbul": "istanbul cover _mocha --dir ./dist -- -R spec -r client/api/mocks -r should --compilers js:babel-core/register --check-leaks client/**/__test__/*.spec.js",
     "eslint": "eslint ./",
-    "nyc": "nyc mocha -r should -r isomorphic-fetch tools/testSetup.js \"client/**/*.spec.js\" --reporter progress",
+    "nyc": "nyc --check-coverage --reporter=html --reporter=text mocha -r should -r isomorphic-fetch tools/testSetup.js \"client/**/*.spec.js\" --reporter progress",
     "test": "npm run eslint && npm run nyc",
     "build": "NODE_ENV=production webpack --progress --colors"
   },
   "nyc": {
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 50,
+    "include": [
+      "client/**/*.js"
+    ],
     "exclude": [
       "**/*.spec.js",
       "tools",
