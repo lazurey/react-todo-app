@@ -12,7 +12,7 @@ Implement a client-side **Todo List** application based on given APIs.
 - Basic project structure with all dependencies you will need.
 - Please use [React MDL](https://react-mdl.github.io/react-mdl/) as style guide for the whole project and try to write as **little** CSS code as possible.
 
-###
+### Set up
 
 Environment preparation
 ```
@@ -40,6 +40,28 @@ Run test (eslint & mocha & nyc)
 ```
 npm run test
 ```
+
+## Requirements
+
+Please refer to the mockup for the visual design
+
+**Required**
+
+1. Display a todo list
+1. Switch tab to show items based on status
+1. Display item number when tab is active
+1. Delete an item
+1. Complete an item
+1. Add a new todo item
+1. Edit existing item title
+
+**Optional**
+
+1. Clear completed items
+
+### Technical requirements
+
+1. 100% test coverage
 
 ## Dependencies
 
